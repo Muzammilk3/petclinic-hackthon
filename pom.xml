@@ -37,6 +37,19 @@
     <spring-format.version>0.0.47</spring-format.version>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>spring-release</id>
+      <name>Spring Releases</name>
+      <url>https://repo.spring.io/release</url>
+    </repository>
+    <repository>
+      <id>spring-milestone</id>
+      <name>Spring Milestones</name>
+      <url>https://repo.spring.io/milestone</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
