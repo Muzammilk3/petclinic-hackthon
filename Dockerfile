@@ -1,8 +1,10 @@
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
-# Expect the application JAR to be present in target/ (build locally with Maven)
-COPY target/*.jar /app/app.jar
+# Mount-based runtime: prefer a host-mounted JAR at /app/app.jar
+# The entrypoint script will run the jar if present, otherwise keep container alive
+COPY docker-entrypoint.sh /app/docker-entrypoint.sh
+RUN chmod +x /app/docker-entrypoint.sh
 
-EXPOSE 8082
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+EXPOSE 8080
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
