@@ -30,3 +30,11 @@ services:
     depends_on:
       - mysql
     restart: unless-stopped
+
+  placeholder:
+    build:
+      context: .
+      dockerfile: Dockerfile.static
+    ports:
+      - "8082:80"
+    restart: unless-stopped
