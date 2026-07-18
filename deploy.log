@@ -1,0 +1,26 @@
+Automated Deployment Script
+Checking prerequisites...
+ERROR: required command 'java' not found in PATH
+Automated Deployment Script
+Checking prerequisites...
+Java and Maven available. Java version:
+java version "21.0.10" 2026-01-20 LTS
+Java(TM) SE Runtime Environment (build 21.0.10+8-LTS-217)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+8-LTS-217, mixed mode, sharing)
+Using build tool: ./mvnw
+Building project (skip tests)...
+[INFO] Scanning for projects...
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-resolvable parent POM for org.springframework.samples:spring-petclinic:5.1.0-SNAPSHOT: The following artifacts could not be resolved: org.springframework.boot:spring-boot-starter-parent:pom:5.1.0 (absent): org.springframework.boot:spring-boot-starter-parent:pom:5.1.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project org.springframework.samples:spring-petclinic:5.1.0-SNAPSHOT (C:\Users\muzam\Downloads\spring-petclinic-main\spring-petclinic-main\pom.xml) has 1 error
+[ERROR]     Non-resolvable parent POM for org.springframework.samples:spring-petclinic:5.1.0-SNAPSHOT: The following artifacts could not be resolved: org.springframework.boot:spring-boot-starter-parent:pom:5.1.0 (absent): org.springframework.boot:spring-boot-starter-parent:pom:5.1.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11 -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException
